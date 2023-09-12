@@ -1,22 +1,22 @@
 USE MASTER
 GO
 
-/* 1). Crear BD con las configuraciones predeterminadas de ubicación 
-y tamaño que establece el servidor (ruta de instalación de SQL Server)*/
+/* 1). Crear BD con las configuraciones predeterminadas de ubicaciÃ³n 
+y tamaÃ±o que establece el servidor (ruta de instalaciÃ³n de SQL Server)*/
 
 CREATE DATABASE BD_VENTAS2023
 GO
 
--- Validar los archivos creados en la base de datos DB_VENTAS2023
+	-- Validar los archivos creados en la base de datos DB_VENTAS2023
 SP_HELPDB BD_VENTAS2023
 GO
--- Borrar BD
+	-- Borrar BD
 DROP DATABASE BD_VENTAS2023
 GO
 
 
 -- 2). Crear BD "BD_VENTAS2023" con estrategia de almacenamiento personalizada
--- Ruta de almacenamiento y tamaño de archivos personalizados.
+-- Ruta de almacenamiento y tamaÃ±o de archivos personalizados.
 
 CREATE DATABASE BD_VENTAS2023
 ON PRIMARY
@@ -37,7 +37,7 @@ LOG ON
 );
 GO
 
---Validar los archivos creados en la base de datos DB_VENTAS2023
+	-- Validar los archivos creados en la base de datos DB_VENTAS2023
 SP_HELPDB BD_VENTAS2023
 GO
 
@@ -53,7 +53,7 @@ ADD FILE (
 	FILEGROWTH=10%
 );
 GO
-	--Validar los archivos creados en la base de datos DB_VENTAS2023
+	-- Validar los archivos creados en la base de datos DB_VENTAS2023
 SP_HELPDB BD_VENTAS2023
 GO
 
@@ -61,7 +61,7 @@ GO
 ALTER DATABASE BD_VENTAS2023
 MODIFY NAME = BD_VENTAS2024;
 GO
-
+	-- Validar los archivos creados en la base de datos DB_VENTAS2024
 SP_HELPDB BD_VENTAS2024
 GO
 	-- Borrar BD BD_VENTAS2024
